@@ -19,6 +19,8 @@ public class PaymentController {
         this.paymentProxy = paymentProxy;
     }
 
+    //controller uses paymentProxy to call Payment service
+    //which is a separate app 'sq-ch11-payments' running on separate port
     @PostMapping("/payment")
     public Payment createPayment(
         @RequestBody Payment payment
